@@ -69,7 +69,13 @@ ExtendedStatus On
 
 
 https://www.devopsschool.com/blog/how-to-install-configure-datadog-integration-with-apache-httpd/
+=====================================================
 
+- Top 7 commands of Datadog agent and its use cases
+- Write down the steps to enable any integration in datadog?
+- Top 10 Metrices of Linux Servers which you should care it?
+- Top 10 Metrices of Windows Servers which you should care it?
+- Top 5 Metrices of Apache which you should not miss it?
 
 
 
