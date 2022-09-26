@@ -38,3 +38,41 @@ Pradeep Negi		13.233.174.29		?h8VKNAaFCtE9tzxCf&N%XZr(x?Iq%-v
 Ashish Shukla		13.235.115.51		3@%%lMSik8QxWeDyTFI8t3-$2?3*Yh33
 Shaminder Garg		65.2.152.142		yY-w3%jQiJjHW-K-PMgNA)SdWhR!kEkV
 ANUJ SHARMA			13.232.8.112		x;.G(ojP!3B3&RQ8&28QQgN)79MhQpJr
+
+====================================================================================
+https://www.devopsschool.com/blog/how-to-install-configure-datadog-integration-with-apache-httpd/
+Integration
+----------------------------
+WEB - apache | IIS
+APP - Tomcat
+DB - mysql
+
+Container - Docker
+Pod - Kubernetes
+
+Cloud - AWS
+
+
+
+
+
+
+LoadModule status_module modules/mod_status.so
+<Location /server-status>
+   SetHandler server-status
+   Order deny,allow
+   Deny from all
+   Allow from all
+   Allow from 172.31.22.38
+</Location>
+ExtendedStatus On
+
+
+https://www.devopsschool.com/blog/how-to-install-configure-datadog-integration-with-apache-httpd/
+
+
+
+
+
+
+
