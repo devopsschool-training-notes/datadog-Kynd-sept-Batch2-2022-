@@ -1,0 +1,147 @@
+13.235.238.245
+===============================
+
+Docker
+https://www.devopsschool.com/blog/how-to-enable-docker-container-monitoring-in-datadog-agent/
+
+Tomcat
+https://www.devopsschool.com/blog/how-to-enable-apache-tomcat-monitoring-in-datadog-agent/
+
+Umesh Prasad		13.233.123.112
+Ankit Chauhan		35.154.178.46	
+Pradeep Negi		43.205.129.179		
+Ashish Shukla		65.2.188.178		
+Shaminder Garg		65.2.176.56	
+ANUJ SHARMA			13.234.114.10	
+==================================================
+==================================================
+MySql
+AWS
+Kubernetes
+=========================================
+MYSQL
+https://www.devopsschool.com/blog/how-to-setup-datadog-agent-integration-with-mysql-to-collect-many-metrics-from-mysql-databases/
+
+
+root - Gshnd$26#12
+
+CREATE USER 'datadog'@'%' IDENTIFIED BY 'Gsh534shs';
+
+datadog
+Gsh534shs
+
+mysql -u datadog --password=Gsh534shs -e "show status" | \
+grep Uptime && echo -e "\033[0;32mMySQL user - OK\033[0m" || \
+echo -e "\033[0;31mCannot connect to MySQL\033[0m"
+
+mysql -u datadog --password=Gsh534shs -e "show slave status" && \
+echo -e "\033[0;32mMySQL grant - OK\033[0m" || \
+echo -e "\033[0;31mMissing REPLICATION CLIENT grant\033[0m"
+
+mysql> GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'%' WITH MAX_USER_CONNECTIONS 5;
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+mysql> GRANT PROCESS ON *.* TO 'datadog'@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql -u root --password='Gshnd$26#12' -e "create database testdb"
+mysql -u root --password='Gshnd$26#12' -e "use testdb"
+mysql -u root --password='Gshnd$26#12' -e "create table customers (customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT)"
+
+
+mysql -u root --password='Gshnd$26#12' -e "create table raju (customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT)"
+
+INSERT INTO table2
+SELECT * FROM table1
+
+
+
+mysql -u root --password='Gshnd$26#12' -e "create database testdb"
+mysql -u root --password='Gshnd$26#12' -e "use testdb"
+mysql -u datadog --password=Gsh534shs -e "show slave status"
+mysql -u root --password='Gshnd$26#12' -e "use testdb" && "create table raju (customer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, first_name TEXT, last_name TEXT)"
+
+
+$ mysql -u root -p
+
+create database testdb
+
+use testdb
+
+CREATE TABLE shop (
+    article INT UNSIGNED  DEFAULT '0000' NOT NULL,
+    dealer  CHAR(20)      DEFAULT ''     NOT NULL,
+    price   DECIMAL(16,2) DEFAULT '0.00' NOT NULL,
+    PRIMARY KEY(article, dealer));
+INSERT INTO shop VALUES
+    (1,'A',3.45),(1,'B',3.99),(2,'A',10.99),(3,'B',1.45),
+    (3,'C',1.69),(3,'D',1.25),(4,'D',19.95);
+
+SELECT * FROM shop ORDER BY article;
+
+====================================================
+How to monitor Kubernetes using Datadog?
+
+Step - 1: Setup a clustor
+1.23
+- https://www.devopsschool.com/blog/kubernetes-1-23-6-cluster-setup-master-and-worker-in-ubuntu-20-04/
+
+1.22
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
+
+Step - 2: Select "Kubernetes" integration in Datadog.
+
+Step - 3:  
+
+
+
+
+
+
+
+
+
+
+echo -n 'bc80bf22d6a944c3b1e2871f54645ae1' | base64
+
+us5.datadoghq.com
+
+PUT_YOUR_BASE64_ENCODED_API_KEY_HERE
+ODY5M2EyNjI5M2QyZjdmNWZkMjc4NWFkZjBmN2I1NGU=
+
+
+SGhdgs354hsASSgdgsjsagsggsjsagsgagsggs
+
+
+U0doZGdzMzU0aHNBU1NnZGdzanNhZ3NnZ3Nqc2Fnc2dhZ3NnZ3M=
+
+export DD_SITE=us5.datadoghq.com
+
+
+
+export DD_KUBELET_TLS_VERIFY=false
+
+
+
+
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
+
+
+
+
+
+
+
+
+2022-09-27 11:26:41 UTC | CORE | ERROR | (pkg/autodiscovery/providers/endpointschecks.go:120 in getNodename) | Cannot get kubeUtil object: temporary failure in kubeutil, will retry later: impossible to reach Kubelet with host: 192.168.1.15. Please check if your setup requires kubelet_tls_verify = false. Activate debug logs to see all attempts made
+2022-09-27 11:26:41 UTC | CORE | ERROR | (pkg/autodiscovery/providers/endpointschecks.go:50 in NewEndpointsChecksConfigProvider) | Cannot get node name: temporary failure in kubeutil, will retry later: impossible to reach Kubelet with host: 192.168.1.15. Please check if your setup requires kubelet_tls_verify = false. Activate debug logs to see all attempts made
+2022-09-27 11:26:41 UTC | CORE | ERROR | (cmd/agent/common/autodiscovery.go:97 in setupAutoDiscovery) | Error while adding config provider endpointschecks: temporary failure in kubeutil, will retry later: impossible to reach Kubelet with host: 192.168.1.15. Please check if your setup requires kubelet_tls_verify = false. Activate debug logs to see all attempts made
+
+
+
+2022-09-27 11:54:26 UTC | CORE | WARN | (pkg/logs/client/http/destination.go:301 in unconditionalSend) | failed to post http payload. code=403 host=agent-http-intake.logs.datadoghq.com response={"errors":[{"status":"403","title":"Forbidden","detail":"Api key is either forbidden or blacklisted"}]}
+2022-09-27 11:54:26 UTC | CORE | INFO | (pkg/collector/worker/check_logger.go:38 in CheckStarted) | check:istio | Running check...
+
+
